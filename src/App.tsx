@@ -96,13 +96,31 @@ export default function App() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 1.2 }}
-                        className="text-2xl md:text-4xl tracking-widest"
+                        className="tracking-widest"
                         style={{
                             color: "var(--color-kyo-purple)",
-                            letterSpacing: "0.3em"
+                            letterSpacing: "0.3em",
+                            fontSize: "clamp(2rem, 6vw, 4.5rem)"
                         }}
                     >
                         開催決定
+                    </motion.div>
+
+                    {/* Event Details */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 1.4 }}
+                        className="mt-8 space-y-2"
+                        style={{
+                            color: "var(--color-kyo-black)",
+                            fontFamily: "var(--font-japanese)",
+                            letterSpacing: "0.05em",
+                            fontSize: "clamp(1rem, 2.5vw, 1.5rem)"
+                        }}
+                    >
+                        <p>場所：京都リサーチパーク</p>
+                        <p>日程：1月16日（土）</p>
                     </motion.div>
 
                     {/* Decorative Bottom Border */}
