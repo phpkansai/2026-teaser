@@ -100,7 +100,9 @@ export default function App() {
                         style={{
                             color: "var(--color-kyo-purple)",
                             letterSpacing: "0.3em",
-                            fontSize: "clamp(2rem, 6vw, 4.5rem)"
+                            fontSize: "clamp(2rem, 6vw, 4.5rem)",
+                            fontFamily: '"Noto Sans JP", sans-serif',
+                            fontWeight: 900
                         }}
                     >
                         開催決定
