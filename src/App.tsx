@@ -91,7 +91,7 @@ export default function App() {
                         className="w-48 h-[1px] bg-gradient-to-r from-transparent via-[var(--color-kyo-red)]/60 to-transparent mx-auto my-12"
                     />
 
-                    {/* Coming Soon */}
+                    {/* 開催決定 */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -102,7 +102,7 @@ export default function App() {
                             letterSpacing: "0.3em"
                         }}
                     >
-                        Coming Soon
+                        開催決定
                     </motion.div>
 
                     {/* Decorative Bottom Border */}
