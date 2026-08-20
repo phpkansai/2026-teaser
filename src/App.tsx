@@ -122,7 +122,7 @@ export default function App() {
                         }}
                     >
                         <p>場所：京都リサーチパーク</p>
-                        <p>日程：1月16日（土）</p>
+                        <p>日程：2027年1月16日（土）</p>
                     </motion.div>
 
                     {/* Decorative Bottom Border */}
