@@ -1,11 +1,13 @@
 import { motion } from "motion/react";
+import { Mail, Presentation } from "lucide-react";
 import seigaihaPattern from "figma:asset/5c80341e9009c05695575b70d8421143ad96b223.png";
 import kikkouPattern from "figma:asset/4b53b48a8e754095abe609acbb4b963f1ccb202c.png";
 import ichimatsuPattern from "figma:asset/5eb6e8c62f6285eb2a255ee6215003f946725307.png";
 
 export default function App() {
     return (
-        <div className="relative min-h-screen overflow-hidden bg-[var(--color-kyo-white)]">
+        <div className="relative bg-[var(--color-kyo-white)]">
+        <div className="relative min-h-screen overflow-hidden">
             {/* Top Right - Seigaiha Pattern */}
             <motion.div
                 initial={{ opacity: 0, x: 100, y: -100 }}
@@ -125,6 +127,28 @@ export default function App() {
                         <p>日程：2027年1月16日（土）</p>
                     </motion.div>
 
+                    {/* SNS Link */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 1.5 }}
+                        className="mt-6"
+                        style={{
+                            fontFamily: "var(--font-japanese)",
+                            fontSize: "clamp(0.85rem, 2vw, 1rem)"
+                        }}
+                    >
+                        <a
+                            href="https://x.com/phpcon_kansai"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline-offset-4 hover:underline"
+                            style={{ color: "var(--color-kyo-black)", opacity: 0.7 }}
+                        >
+                            公式X（Twitter）：@phpcon_kansai
+                        </a>
+                    </motion.div>
+
                     {/* Decorative Bottom Border */}
                     <motion.div
                         initial={{ scaleX: 0 }}
@@ -140,6 +164,127 @@ export default function App() {
                 <div className="absolute bottom-24 left-8 w-16 h-16 border-b-2 border-l-2 border-[var(--color-kyo-red)]/40" />
                 <div className="absolute bottom-24 right-8 w-16 h-16 border-b-2 border-r-2 border-[var(--color-kyo-red)]/40" />
             </div>
+        </div>
+
+        {/* Information Sections */}
+        <div className="relative z-10 px-6 pb-24">
+            <div className="max-w-3xl mx-auto space-y-16">
+
+                {/* About */}
+                <motion.section
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    <h2
+                        className="mb-6 text-center tracking-widest"
+                        style={{
+                            color: "var(--color-kyo-purple)",
+                            letterSpacing: "0.2em",
+                            fontFamily: "var(--font-japanese)",
+                            fontWeight: 700,
+                            fontSize: "clamp(1.25rem, 3vw, 1.75rem)"
+                        }}
+                    >
+                        開催概要
+                    </h2>
+                    <div
+                        className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[var(--color-kyo-gold)] to-transparent mx-auto mb-8"
+                    />
+                    <div
+                        className="space-y-4 leading-relaxed"
+                        style={{
+                            color: "var(--color-kyo-black)",
+                            fontFamily: "var(--font-japanese)",
+                            fontSize: "clamp(0.95rem, 2vw, 1.05rem)"
+                        }}
+                    >
+                        <div className="space-y-2">
+                            <p>PHPカンファレンス関西は、PHPエンジニア（PHPer）がPHPやPHP周辺の技術的知識やノウハウ、体験を共有するための大規模技術カンファレンスです。</p>
+                            <p>2011年から過去8回開催されており、毎回その時のPHP最新情報やトレンドの話題で盛り上がります。</p>
+                            <p>関西のPHPerがお互いに情報を交換し、エンジニアとしてレベルアップをする場となるべく、2018年から6年ぶりに開催することになりました。</p>
+                            <p>イベント当日は一般公募で集まったエンジニアによる講演をはじめ、その他情報共有を行うための催しが行われます。</p>
+                        </div>
+                        <div>
+                            <p className="mb-1" style={{ color: "var(--color-kyo-purple)", fontWeight: 700 }}>
+                                参加資格
+                            </p>
+                            <p>PHPを使っている人、PHPを使っていた人、PHPに興味がある人など、PHPに関係する人全てに参加資格があります。</p>
+                            <p>自身の情報アップデートのためにもぜひお越しください！！</p>
+                        </div>
+                    </div>
+                </motion.section>
+
+                {/* Proposal / Sponsor Links */}
+                <motion.section
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="grid gap-6 sm:grid-cols-2"
+                >
+                    <a
+                        href="https://fortee.jp/phpcon-kansai2026/speaker/proposal/cfp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-3 rounded-lg border px-6 py-8 text-center transition-colors hover:bg-[var(--color-kyo-beige)]/30"
+                        style={{
+                            borderColor: "var(--color-kyo-gold)",
+                            color: "var(--color-kyo-black)"
+                        }}
+                    >
+                        <Presentation size={28} style={{ color: "var(--color-kyo-red)" }} />
+                        <span
+                            style={{
+                                fontFamily: "var(--font-japanese)",
+                                fontWeight: 700,
+                                fontSize: "1.1rem"
+                            }}
+                        >
+                            プロポーザル募集
+                        </span>
+                        <span className="text-sm opacity-70">登壇者募集フォームはこちら</span>
+                        <span
+                            className="text-sm"
+                            style={{ color: "var(--color-kyo-red)", fontWeight: 700 }}
+                        >
+                            締切：2026年10月18日（日）
+                        </span>
+                    </a>
+
+                    <a
+                        href="https://docs.google.com/presentation/d/1L8lzrsSyK7unjY8-43bz7bi_nQ_M-DJkz5hGH_EkiD8/edit?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-3 rounded-lg border px-6 py-8 text-center transition-colors hover:bg-[var(--color-kyo-beige)]/30"
+                        style={{
+                            borderColor: "var(--color-kyo-gold)",
+                            color: "var(--color-kyo-black)"
+                        }}
+                    >
+                        <Mail size={28} style={{ color: "var(--color-kyo-red)" }} />
+                        <span
+                            style={{
+                                fontFamily: "var(--font-japanese)",
+                                fontWeight: 700,
+                                fontSize: "1.1rem"
+                            }}
+                        >
+                            スポンサー募集
+                        </span>
+                        <span className="text-sm opacity-70">募集要項・お問い合わせはこちら</span>
+                        <span
+                            className="text-sm"
+                            style={{ color: "var(--color-kyo-red)", fontWeight: 700 }}
+                        >
+                            締切：2026年11月6日（金）
+                        </span>
+                    </a>
+                </motion.section>
+
+            </div>
+        </div>
         </div>
     );
 }
