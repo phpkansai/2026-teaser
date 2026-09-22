@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, Presentation } from "lucide-react";
+import { Mail, MessageSquarePlus, Presentation } from "lucide-react";
 import seigaihaPattern from "figma:asset/5c80341e9009c05695575b70d8421143ad96b223.png";
 import kikkouPattern from "figma:asset/4b53b48a8e754095abe609acbb4b963f1ccb202c.png";
 import ichimatsuPattern from "figma:asset/5eb6e8c62f6285eb2a255ee6215003f946725307.png";
@@ -280,6 +280,33 @@ export default function App() {
                         >
                             締切：2026年11月6日（金）
                         </span>
+                    </a>
+
+                    <a
+                        href="https://requestalk-2026.kphpug.jp/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-3 rounded-lg border px-6 py-8 text-center transition-colors hover:bg-[var(--color-kyo-beige)]/30 sm:col-span-2"
+                        style={{
+                            borderColor: "var(--color-kyo-gold)",
+                            color: "var(--color-kyo-black)"
+                        }}
+                    >
+                        <MessageSquarePlus size={28} style={{ color: "var(--color-kyo-red)" }} />
+                        <span
+                            style={{
+                                fontFamily: "var(--font-japanese)",
+                                fontWeight: 700,
+                                fontSize: "1.1rem"
+                            }}
+                        >
+                            リクエストーク
+                        </span>
+                        <div className="text-sm opacity-70 max-w-xl space-y-1">
+                            <p>自分が聞きたいトークをリクエストしよう！！</p>
+                            <p>リクエストークとは、自分がカンファレンスで聞いてみたいトークをリクエストできるしくみです。
+                                いままで登壇したことがない人も、あまりカンファレンスに参加したことがなかった人も、リクエストークを使ってカンファレンスづくりに参加してみよう！</p>
+                        </div>
                     </a>
                 </motion.section>
 
